@@ -21,7 +21,7 @@
   <script id="MathJax-script" async
           src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-<title>Oxford University Press Pakistan - Maths Wise Book 6 - Unit 8: Geometry: Lines and Angles</title>
+<title>Oxford University Press Pakistan - Maths Wise Book 6 - Unit 8: Geometry</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" type="text/css">
 
   <style>
@@ -428,7 +428,7 @@
         
       </a>
       <div class="header-copy">
-        <h1 class="header-title">Maths Wise Book 6 - Unit 8: Geometry: Lines and Angles</h1>
+        <h1 class="header-title">Maths Wise Book 6 - Unit 8: Geometry</h1>
         <p class="header-subtitle">Select an answer &rarr; press Submit &rarr; see feedback &rarr; press Next to continue.</p>
       </div>
     </div>
@@ -543,28 +543,28 @@
   },
   {
     q: "What do the lines \\(s\\) and \\(t\\) in the figure represent?",
-    image: "u8q4.png",
+    image: "imgs/u8q4.png",
     choices: ["Perpendicular lines", "Curved lines", "Parallel lines", "Transversals"],
     correct: 3,
     explain: "Line(s) that cuts two or more lines at different points is called transversal(s)."
   },
   {
     q: "What do the lines \\(l\\), \\(m\\) and \\(n\\) in the figure represent?",
-    image: "u8q5.png",
+    image: "imgs/u8q5.png",
     choices: ["Nonparallel lines", "Transversals", "Perpendicular lines", "Parallel lines"],
     correct: 3,
     explain: "Parallel lines move in the same direction and never intersect."
   },
   {
     q: "What do the lines \\(AS\\) and \\(TC\\) in the figure represent?",
-    image: "u8q6.png",
+    image: "imgs/u8q6.png",
     choices: ["Curved lines", "Transversals", "Perpendicular lines", "Parallel lines"],
     correct: 2,
     explain: "Perpendicular lines meet at \\(90^\\circ\\), forming right angles."
   },
   {
     q: "What is the value of angle 3 if the value of angle 2 is \\(65^\\circ\\)?",
-    image: "u8q7.jpg",
+    image: "imgs/u8q7.jpg",
     choices: ["\\(25^\\circ\\)", "\\(65^\\circ\\)", "\\(115^\\circ\\)", "\\(180^\\circ\\)"],
     correct: 1,
     explain: "Vertically opposite angles are always equal. Given angle = \\(65^\\circ\\), Opposite angle = \\(65^\\circ\\)."
@@ -577,7 +577,7 @@
   },
   {
     q: "What is the value of angle 6 if the value of angle 4 is \\(100^\\circ\\)?",
-    image: "u8q9.jpg",
+    image: "imgs/u8q9.jpg",
     choices: ["\\(100^\\circ\\)", "\\(80^\\circ\\)", "\\(115^\\circ\\)", "\\(180^\\circ\\)"],
     correct: 1,
     explain: "Interior angles are supplementary. \\(180^\\circ - 100^\\circ = 80^\\circ\\)."
@@ -927,6 +927,8 @@
         </div>
       `;
 
+      typesetNow();
+
       if (percent >= 70) {
         setTimeout(triggerConfetti, 200);
         setTimeout(triggerConfetti, 520);
@@ -938,6 +940,7 @@
       reviewToggleBtn.addEventListener('click', () => {
         reviewOpen = !reviewOpen;
         reviewList.classList.toggle('open', reviewOpen);
+        if (reviewOpen) typesetNow();
         reviewToggleBtn.textContent = reviewOpen ? 'Hide Answers' : 'Review Answers';
       });
     }
